@@ -1,0 +1,36 @@
+{
+    "version": "1.0.0",
+    "description": "磁带卡座风格的命令行网易云音乐客户端 · A terminal client for NetEase Cloud Music with a cassette-deck interface",
+    "homepage": "https://github.com/Egdon/tapefox",
+    "license": "GPL-3.0-only",
+    "notes": "推荐在 Windows Terminal 中运行 tapefox。Run tapefox in Windows Terminal.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Egdon/tapefox/releases/download/v1.0.0/tapefox_1.0.0_windows_amd64.zip",
+            "hash": "d9c89089c016ba1b23516308b27f1c1cd0b8ce0cf2201182347b468a29d8429d",
+            "extract_dir": "tapefox_1.0.0_windows_amd64"
+        },
+        "arm64": {
+            "url": "https://github.com/Egdon/tapefox/releases/download/v1.0.0/tapefox_1.0.0_windows_arm64.zip",
+            "hash": "425494dbf47e031adeddbf25ebc0362c822aaf9c6709799c0f6fb28c83abf0c2",
+            "extract_dir": "tapefox_1.0.0_windows_arm64"
+        }
+    },
+    "bin": "tapefox.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Egdon/tapefox/releases/download/v$version/tapefox_$version_windows_amd64.zip",
+                "extract_dir": "tapefox_$version_windows_amd64"
+            },
+            "arm64": {
+                "url": "https://github.com/Egdon/tapefox/releases/download/v$version/tapefox_$version_windows_arm64.zip",
+                "extract_dir": "tapefox_$version_windows_arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
